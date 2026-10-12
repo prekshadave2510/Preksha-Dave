@@ -1,0 +1,35 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 12-10-2026 | Task 02 - Campus Canteen Order Calculator
+
+Enrollment No.:26CE018
+Name:Preksha Dave
+
+SIMPLE BUGS (write a brief explanation for each)
+Bug | Original problem | Correction made | Why required
+S1 | Navigation href misspelled the calculator ID | Changed #calcuator to #calculator | The link now scrolls to the matching section.
+S2 | Site information used a generic div | Replaced div.site-footer with footer.site-footer | footer is the semantic HTML5 element for footer information.
+S3 | Missing colon after background-color | Corrected to background-color: #f1f6f9; | CSS declaration syntax must include a colon.
+S4 | Selector used .pageTitle but HTML has id="pageTitle" | Changed selector to #pageTitle | # selects the matching HTML ID.
+S5 | Subtotal used unitPrice + quantity | Changed to unitPrice * quantity | Subtotal is unit price multiplied by quantity.
+S6 | Service charge was 15% | Changed multiplier to 0.05 (5%) | The requested service charge is 5% of subtotal.
+
+CODE COMPLETION / IMPLEMENTATION (briefly state what was completed)
+M1: Added charset="UTF-8" and responsive viewport metadata.
+M2: Added a semantic aside.notice with the Important Note heading and a reminder to check input values.
+M3: Set .nav-links to display:flex and justify-content:space-between.
+M4: Set .cards to a two-column CSS Grid with equal-width columns.
+M5: At max-width 600px, the cards use one column and navigation uses a vertical flex direction.
+M6: calculateDiscount(amount, percentage) returns amount * percentage / 100.
+D1: getRate(type) uses if/else if/else to return 10 for Student, 5 for Staff, and 0 for Visitor.
+D2: calculateTotal returns subtotal - discount + serviceCharge.
+D3: buildBreakdown uses a for loop to display the running cost after every item.
+
+FUNCTIONAL TEST
+Test input: Price ₹100; quantity 3; Student.
+Observed result: Subtotal ₹300.00; discount ₹30.00; service charge ₹15.00; payable ₹285.00. Running item costs: item 1 ₹100.00, item 2 ₹200.00, item 3 ₹300.00.
+Mobile layout checked :Yes
+Desktop layout checked: Yes
+
+GIT VERSION CONTROL
+Meaningful implementation commit (git log -1 --oneline before report update): 1ad1142 Complete canteen calculator and responsive layout
+GitHub URL (if available): Not pushed to GitHub.
